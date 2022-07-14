@@ -1,0 +1,13 @@
+body{
+    background-color: #000000;
+}
+.default{
+    position: absolute;
+    background-color: rgb(88, 82, 82);
+    flex-direction: column;
+    display: flex;
+    min-width: 300px;
+    border-radius: 5px;
+    width: 25%;
+    height: 100%;
+}
