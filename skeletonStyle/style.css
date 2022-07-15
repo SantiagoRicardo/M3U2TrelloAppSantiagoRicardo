@@ -1,13 +1,46 @@
-body{
+body {
+    padding: 0;
+    margin: 0;
     background-color: #000000;
-}
-.default{
-    position: absolute;
+  }
+  
+  /* Hacer que todos los textos sean blancos */
+  * {
+    color: white;
+  }
+  
+  header {
+    background-color: #292524;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+  
+  /* Boton para add el todo */
+  #add-todo {
+    all: unset;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: #0d9488;
+    font-size: 1rem;
+  }
+  
+  /* Contenedor para todas las columnas */
+  main {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .default {
     background-color: rgb(88, 82, 82);
+    margin-top: 5%;
+    margin-left: 2%;
     flex-direction: column;
     display: flex;
-    min-width: 300px;
+    min-width: 200px;
     border-radius: 5px;
-    width: 25%;
-    height: 100%;
-}
+    width: 20%;
+    height: 500px;
+  }
+  
