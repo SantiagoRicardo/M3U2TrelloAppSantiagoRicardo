@@ -7,6 +7,9 @@ body {
   /* Hacer que todos los textos sean blancos */
   * {
     color: white;
+    box-sizing: border-box;
+    font-family: 'calibri';
+    font-size: 18px;
   }
   
   header {
@@ -46,16 +49,28 @@ body {
     height: 500px;
   }
 
-  .form{
-    background-color: rgb(73, 8, 134);
-    margin-top: 5%;
-    margin-left: 2%;
+  #form{
+    
+    background: #24303c;
+    margin: auto;
+    margin-top: 100px;
+    padding: 30px;
     flex-direction: column;
-    display: flex;
-    min-width: 200px;
     border-radius: 5px;
-    width: 5%;
-    height: 250px;
+    overflow:visible;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+  }
+
+  .controls{
+    width: 100%;
+    padding: 10px;
+    background:#24303c;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    border: 1px solid #2f0059;
+    font-size: 18px;
   }
 
   #title {
@@ -84,9 +99,9 @@ body {
     padding-left: 15px;
   }
   .row{
-    width: 100rem;
+    width: 100%;
     display: flex;
-    padding: 15px;
+    padding: 10px;
   
   }
   .class__boton{
