@@ -10,19 +10,21 @@ body {
   }
   
   header {
+    align-items: center;
     background-color: #292524;
     display: flex;
     justify-content: space-between;
-    padding: 0 2rem;
+    width: 100%;
   }
   
   /* Boton para add el todo */
   #add-todo {
+    margin: 2%;
     all: unset;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     cursor: pointer;
-    background-color: #0d9488;
+    background-color: #2f0059;
     font-size: 1rem;
   }
   
@@ -43,4 +45,53 @@ body {
     width: 20%;
     height: 500px;
   }
+
+  .form{
+    background-color: rgb(73, 8, 134);
+    margin-top: 5%;
+    margin-left: 2%;
+    flex-direction: column;
+    display: flex;
+    min-width: 200px;
+    border-radius: 5px;
+    width: 5%;
+    height: 250px;
+  }
+
+  #title {
+    text-align: center;
+    font-weight : bold;
+  }
+
+  img{
+    display: inline-block;
+ 
+    width:45px ; 
+    height: 45px;
+  }
+
+  .logo{
+    padding-right: 80%;
+    width: 5%;
+    height: 5%;
+
+  }
+
+  .container{
+    width: 100%;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .row{
+    width: 100rem;
+    display: flex;
+    padding: 15px;
   
+  }
+  .class__boton{
+    margin: 0 9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
