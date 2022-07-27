@@ -47,6 +47,7 @@ body {
     border-radius: 5px;
     width: 20%;
     height: 500px;
+
   }
 
   #form{
@@ -110,3 +111,7 @@ body {
     align-items: center;
     justify-content: space-between;
   }
+  .hidden {
+    display: none;
+  }
+  

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TrelloApp</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="logo">
+            <h1>Trello App Logo</h1>
+          </div>
+
+          <div class="class__boton">
+            <!--<h1>Trello App<h1>-->
+            <button id="add-todo">Crear todo</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="default">
+        <h3 id="title">Tarea Por Hacer</h3>
+        <ul id="tarea-por-hacer">
+          <li>Todo #1</li>
+          <li>Todo #2</li>
+        </ul>
+      </div>
+
+      <div class="default">
+        <h3 id="title">Tarea En Proceso</h3>
+        <ul>
+          <li>Todo #1</li>
+          <li>Todo #2</li>
+        </ul>
+      </div>
+
+      <div class="default">
+        <h3 id="title">Tarea Finalizada</h3>
+        <ul>
+          <li>Todo #1</li>
+          <li>Todo #2</li>
+        </ul>
+      </div>
+
+      <div>
+        <form id="form">
+          <input class="controls" type="text" id="tarea" placeholder="Tarea" required /> <br />
+          <input class="controls" type="text" id="descripcion" placeholder="Descipcion" required />
+          <br />
+          <input class="controls" type="text" id="responsable" placeholder="Responsable" required />
+          <br />
+          <input class="controls" type="date" id="fecha" placeholder="Fecha De Entrega" required />
+          <br />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </main>
+
+    <!--Recursos Externos-->
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--Recursos Externos-->
+    <script src="/html/js/helpers/date.js"></script>
+    <script src="index.js" ></script>
+  </body>
+</html>
