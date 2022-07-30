@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!--<link rel="icon" type="image/svg+xml" href="/Vite.svg" />-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="src/style.css">
   </head>
-    <body>
-      <header>
+    <body class="0">
+      <header class="header">
         <div class="container">
           <div class="row">
             <div class="logo">
@@ -21,51 +21,57 @@
           </div>
         </div>
       </header>
-  
-      <main>
-        <div class="default">
-          <h3 id="title">Tarea Por Hacer</h3>
-          <ul id="tarea-por-hacer">
-            <li>Todo #1</li>
-            <li>Todo #2</li>
-          </ul>
+      
+      <main class="main">
+        <!--Inicio Tableros-->
+        <div class="container">
+          <section class="default">
+            <h2 id="title">Tarea Por Hacer</h2>
+            <div class="contenedor-tareas" id="tarea-por-hacer"> </div>
+          </section>
+    
+          <section class="default">
+            <h2 id="title">Tarea En Proceso</h2>
+            <div class="contenedor-tareas" id="tarea-en-progreso"> </div>
+          </section>
+    
+          <section class="default">
+            <h2 id="title">Tarea Finalizada</h2>
+            <div class="contenedor-tareas" id="tarea-finalizada"> </div>
+          </section>
+          <!--Fin Tableros-->
         </div>
-  
-        <div class="default">
-          <h3 id="title">Tarea En Proceso</h3>
-          <ul>
-            <li>Todo #1</li>
-            <li>Todo #2</li>
-          </ul>
-        </div>
-  
-        <div class="default">
-          <h3 id="title">Tarea Finalizada</h3>
-          <ul>
-            <li>Todo #1</li>
-            <li>Todo #2</li>
-          </ul>
-        </div>
-  
-        <div>
-          <form id="form">
-            <input class="controls" type="text" id="tarea" placeholder="Tarea" required /> <br />
-            <input class="controls" type="text" id="descripcion" placeholder="Descipcion" required />
-            <br />
-            <input class="controls" type="text" id="responsable" placeholder="Responsable" required />
-            <br />
-            <input class="controls" type="date" id="fecha" placeholder="Fecha De Entrega" required />
-            <br />
-            <button type="submit">Submit</button>
-          </form>
-        </div>
+
+        <aside class="form" id="form">
+          <div class="container">
+            <div class="formulario-barra">
+              <h2 class="titulo-formulario">Nueva Tarea</h2>
+                <input class="controls" type="text" id="tarea" placeholder="Tarea" required /> <br />
+                <input class="controls" type="text" id="descripcion" placeholder="Descipcion" required />
+                <br />
+                <input class="controls" type="text" id="responsable" placeholder="Responsable" required />
+                <br />
+                <input class="controls" type="date" id="fecha" placeholder="Fecha" required />
+            
+                <!--<select class="controls" id="plazo" required>
+                  <option value="">Plazo De Entrega</option>
+                  <option value="1">1 día</option>
+                  <option value="2">2 días</option>
+                  <option value="7">1 semana</option>
+                </select>-->
+                <br />
+                <button class="boton" id="boton" type="submit">Enviar</button>
+                <button class="boton2" id="boton2" type="reset">Cancelar</button>
+            </div>
+          </div>
+        </aside>
       </main>
-  
       <!--Recursos Externos-->
-      <script src="https://momentjs.com/downloads/moment.js"></script>
       <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <!--Recursos Externos-->
-      <script src="/html/js/helpers/date.js"></script>
-      <script src="/src/main.js" type="module" ></script>
+      <script src="/src/library/moment.js"></script>
+      <!--Recursos Internos-->
+      <script src="/src/api/request.js" type="module"></script>
+      <script src="/src/utils/date.js"></script>
+      <script src="src/main.js" type="module"></script>
     </body>
 </html>

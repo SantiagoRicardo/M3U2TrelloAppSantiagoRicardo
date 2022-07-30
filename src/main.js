@@ -1,6 +1,6 @@
-import '/src/style.css'
-import javascriptLogo from '../javascript.svg'
 
+//import javascriptLogo from '.../javascript.svg'
+/*
 function getElement(query) {
   const el = document.querySelector(query);
   if (!el) return alert(`Not found: ${query}`);
@@ -39,4 +39,4 @@ form.onsubmit = (event) => {
 
   tareaPorHacer.appendChild(li);
 };
-
+*/
