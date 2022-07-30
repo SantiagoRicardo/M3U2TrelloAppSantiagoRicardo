@@ -4,80 +4,84 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/assets/TrelloApp.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/style.css"/>
-    <link rel="shortcut icon" href="assets/TrelloApp.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="shortcut icon" href="/assets/TrelloApp.png" type="image/x-icon" />
   </head>
-    <body class="body">
-      <header class="header">
-        <div class="container">
-          <div class="row">
-            <div class="logo">
-              <img class="logo2" src="/assets/TrelloApp.png" alt="Trello App Logo" />
-            </div>
-  
-            <div class="class__boton">
-              <!--<h1>Trello App<h1>-->
-              <button id="add-todo">Crear Tarea</button>
-            </div>
-          </div>
-        </div>
-      </header>
-      
-      <main class="main">
-        <!--Inicio Tableros-->
-        <div class="container">
-          <section class="default">
-            <h2 id="title">Tarea Por Hacer</h2>
-            <div class="contenedor-tareas" id="tarea-por-hacer"> </div>
-          </section>
-    
-          <section class="default">
-            <h2 id="title">Tarea En Proceso</h2>
-            <div class="contenedor-tareas" id="tarea-en-progreso"> </div>
-          </section>
-    
-          <section class="default">
-            <h2 id="title">Tarea Finalizada</h2>
-            <div class="contenedor-tareas" id="tarea-finalizada"> </div>
-          </section>
-          <!--Fin Tableros-->
-        </div>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img class="logo2" src="/assets/TrelloApp.png" alt="Trello App Logo" />
+      </div>
 
-        <aside class="form" id="form">
-          <div class="container">
-            <div class="formulario-barra">
-              <h2 class="titulo-formulario">Nueva Tarea</h2>
-                <input class="controls" type="text" id="tarea" placeholder="Tarea" required /> <br />
-                <input class="controls" type="text" id="descripcion" placeholder="Descipcion" required />
-                <br />
-                <input class="controls" type="text" id="responsable" placeholder="Responsable" required />
-                <br />
-                <input class="controls" type="date" id="fecha" placeholder="Fecha" required />
-            
-                <!--<select class="controls" id="plazo" required>
+      <div class="class__boton">
+        <!--<h1>Trello App<h1>-->
+        <button class="open-sidebar" id="open-sidebar">Crear Tarea</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <!--Inicio Tableros-->
+      <div id="todos-container">
+        <section class="default" id="por-hacer-contenedor">
+          <h2 id="title">Tarea Por Hacer</h2>
+          <div class="contenedor-tareas" id="tarea-por-hacer"></div>
+        </section>
+
+        <section class="default">
+          <h2 id="title">Tarea En Proceso</h2>
+          <div class="contenedor-tareas" id="tarea-en-progreso"></div>
+        </section>
+
+        <section class="default">
+          <h2 id="title">Tarea Finalizada</h2>
+          <div class="contenedor-tareas" id="tarea-finalizada"></div>
+        </section>
+        <!--Fin Tableros-->
+      </div>
+
+      <aside class="form" id="sidebar">
+        <div class="container">
+          <form class="formulario-barra">
+            <h2 class="titulo-formulario">Nueva Tarea</h2>
+            <input class="controls" type="text" id="tarea" placeholder="Tarea" required />
+            <br />
+            <input
+              class="controls"
+              type="text"
+              id="descripcion"
+              placeholder="Descipcion"
+              required
+            />
+            <br />
+            <input
+              class="controls"
+              type="text"
+              id="responsable"
+              placeholder="Responsable"
+              required
+            />
+            <br />
+            <input class="controls" type="date" id="fecha" placeholder="Fecha" required />
+
+            <!--<select class="controls" id="plazo" required>
                   <option value="">Plazo De Entrega</option>
                   <option value="1">1 día</option>
                   <option value="2">2 días</option>
                   <option value="7">1 semana</option>
                 </select>-->
-                <br />
-                <button class="boton" id="boton" type="submit">Enviar</button>
-                <button class="boton2" id="boton2" type="reset">Cancelar</button>
-            </div>
-          </div>
-        </aside>
-      </main>
-      <!--Recursos Externos-->
-      <script src="src/library/axios.js"></script>
-      <script src="/src/library/moment.js"></script>
-      <script src="/src/library/dragabble.js"></script>
-      <script src="/src/library/hammer.js"></script>
-      <!--Recursos Internos-->
-      <script src="/src/api/request.js" type="module"></script>
-      <script src="/src/utils/date.js"></script>
-      <script src="/src/utils/draggandDrop.js"></script>
-      <script src="/src/utils/gesturedHammer.js"></script>
-      <script src="/src/utils/toggleModal.js"></script>
-      <script src="src/main.js" type="module"></script>
-    </body>
+            <br />
+            <button class="boton" id="boton" type="submit">Enviar</button>
+            <button class="boton2" id="boton2" type="reset">Cancelar</button>
+          </form>
+        </div>
+      </aside>
+    </main>
+    <!--Recursos Externos-->
+    <script src="/src/library/dragabble.js"></script>
+    <script src="/src/library/hammer.js"></script>
+    <!--Recursos Internos-->
+    <script src="/src/utils/draggandDrop.js"></script>
+    <script src="/src/utils/gesturedHammer.js"></script>
+    <script src="/src/main.js" type="module"></script>
+  </body>
 </html>

@@ -1,42 +1,42 @@
+import { ELEMENTS } from './utils/all-elements.js';
+import postTask from './api/postTask.js';
+import getAllTasks from './api/getAllTasks.js';
+import renderTasks from './utils/render-tasks.js';
 
-//import javascriptLogo from '.../javascript.svg'
-/*
-function getElement(query) {
-  const el = document.querySelector(query);
-  if (!el) return alert(`Not found: ${query}`);
-  return el;
-}
+const ALL_TASKS = [];
 
-const addTodoButton = getElement('#add-todo');
-const tareaPorHacer = getElement('#tarea-por-hacer');
-const form = getElement('form');
+// IIFE -> Immediately Invoked Function Expression
+(async function () {
+  const tasks = await getAllTasks();
+  ALL_TASKS.push(...tasks);
+  renderTasks(ALL_TASKS);
+})();
 
-addTodoButton.onclick = () => {
-  const form = getElement('#form');
-  if (form.classList.contains('hidden')) {
-    form.classList.remove('hidden');
-  } else {
-    form.classList.add('hidden');
-  }
-};
+ELEMENTS.modal.openSidebar.addEventListener('click', () => {
+  ELEMENTS.modal.sidebar.classList.add('active');
+});
 
-form.onsubmit = (event) => {
+ELEMENTS.modal.botonCancelar.addEventListener('click', () => {
+  ELEMENTS.modal.sidebar.classList.remove('active');
+});
+
+ELEMENTS.form.form.onsubmit = async (event) => {
   event.preventDefault();
-  const tareaInput = getElement('#tarea');
-  const descripcionInput = getElement('#descripcion');
-  const responsableInput = getElement('#responsable');
-  const fechaInput = getElement('#fecha');
+  const { tarea, descripcion, responsable, fecha } = ELEMENTS.form.inputs;
 
-  const li = document.createElement('li');
-  li.onclick = () => {
-    console.log('clicked');
+  const newestTask = ALL_TASKS[ALL_TASKS.length - 1];
+
+  const newTask = {
+    id: ++newestTask.id,
+    title: tarea.value,
+    person: responsable.value,
+    details: descripcion.value,
+    state: 'to-do',
+    deadline: Math.floor(new Date(fecha.value).getTime() / 1000),
+    created: Math.floor(new Date().getTime() / 1000),
   };
 
-  li.innerHTML = `<p>${tareaInput.value}</p>
-  <p>${descripcionInput.value}</p>
-  <p>${responsableInput.value}</p>
-  <p>${fechaInput.value}</p>`;
-
-  tareaPorHacer.appendChild(li);
+  const task = await postTask(newTask);
+  ALL_TASKS.push(task);
+  renderTasks(ALL_TASKS);
 };
-*/
