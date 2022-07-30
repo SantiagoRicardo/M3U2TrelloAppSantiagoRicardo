@@ -12,7 +12,7 @@ body {
   color: white;
   box-sizing: border-box;
   font-family: 'calibri';
-  font-size: 18px;
+  
 }
 
 .header {
@@ -141,7 +141,8 @@ body {
 #title {
   text-align: center;
   font-weight : bold;
-  color: #0008fe;
+  font-size: 20;  
+  color: white;
 }
 
 img{
@@ -155,7 +156,10 @@ img{
   padding-right: 80%;
   width: 5%;
   height: 5%;
+}
 
+.logo2{
+  padding-left: 5%;
 }
 
 .container {
@@ -186,7 +190,7 @@ img{
   padding: 1rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border-radius: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  transition: 300ms ease-in-out;;
+  /*transition: 300ms ease-in-out;*/
   cursor: pointer;
 }
 
@@ -198,4 +202,20 @@ img{
 .titulo-tarea
 {
   font-size: 1.125rem;
+}.draggable-mirror {
+  z-index: 999;
+}
+
+.draggable-container--over article:not(.draggable-mirror) {
+  z-index: 0;
+}
+
+.draggable--over, .draggable-source--is-dragging {
+  border-color: goldenrod;
+  opacity: .4;
+  background-color: #24303c;
+}
+
+.draggable-container--over {
+  border: none;
 }

@@ -1,5 +1,5 @@
 
-const API_URL = "https://my-json-server.typicode.com/Stiwar9816/kanbanApp";
+const API_URL = "https://my-json-server.typicode.com/SantiagoRicardo/M3U2TrelloAppSantiagoRicardo";
 
 //Se realiza la petición
 

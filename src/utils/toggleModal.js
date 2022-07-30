@@ -3,7 +3,7 @@ const
     addTodo = document.querySelector('#add-todo'),
     botonCancelar = document.querySelector('#boton2');
 
-add-todo.addEventListener('click', () => {
+addTodo.addEventListener('click', () => {
   formularioBarra.classList.add('active');
 });
 

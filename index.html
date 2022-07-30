@@ -2,21 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!--<link rel="icon" type="image/svg+xml" href="/Vite.svg" />-->
+    <link rel="icon" type="image/svg+xml" href="/assets/TrelloApp.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="/src/style.css"/>
+    <link rel="shortcut icon" href="assets/TrelloApp.png" type="image/x-icon"/>
   </head>
-    <body class="0">
+    <body class="body">
       <header class="header">
         <div class="container">
           <div class="row">
             <div class="logo">
-              <h1>Trello App Logo</h1>
+              <img class="logo2" src="/assets/TrelloApp.png" alt="Trello App Logo" />
             </div>
   
             <div class="class__boton">
               <!--<h1>Trello App<h1>-->
-              <button id="add-todo">Crear todo</button>
+              <button id="add-todo">Crear Tarea</button>
             </div>
           </div>
         </div>
@@ -67,11 +68,16 @@
         </aside>
       </main>
       <!--Recursos Externos-->
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="src/library/axios.js"></script>
       <script src="/src/library/moment.js"></script>
+      <script src="/src/library/dragabble.js"></script>
+      <script src="/src/library/hammer.js"></script>
       <!--Recursos Internos-->
       <script src="/src/api/request.js" type="module"></script>
       <script src="/src/utils/date.js"></script>
+      <script src="/src/utils/draggandDrop.js"></script>
+      <script src="/src/utils/gesturedHammer.js"></script>
+      <script src="/src/utils/toggleModal.js"></script>
       <script src="src/main.js" type="module"></script>
     </body>
 </html>
